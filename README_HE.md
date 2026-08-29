@@ -56,6 +56,8 @@ cp -r fixtures/clients/_template clients/dana-studio
 
 ## Wispr Flow
 
+הערכה נבנתה סביב Wispr Flow (הכתבה בכל אפליקציה, Notetaker לפגישות, ושרת MCP). הרשמה דרך הקישור https://wisprflow.ai/r?YONATAN1 נותנת חודש Pro חינם (זה קישור הפניה של המחבר). תיעוד: https://docs.wisprflow.ai
+
 כשה-MCP של Wispr Flow מחובר (במק: Settings, MCP, Connect for Claude, או ה-URL תחת All other apps), post-call --from-wispr מחפש את הפגישה, מציג עד שלוש מועמדות, ומחכה לבחירה שלכם לפני שהוא קורא את התמליל. אחר כך הוא שומר את הטקסט ב-call-<date>.txt ואומר את זה. prep-call ו-client-context משתמשים רק בכותרות ותאריכים של פגישות. בלי ה-MCP הכול עובד מקבצים.
 
 ## הבטחות

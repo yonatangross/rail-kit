@@ -73,6 +73,10 @@ invent a client.
 
 ## Wispr Flow
 
+The kit was built around [Wispr Flow](https://wisprflow.ai/r?YONATAN1) (dictation in
+every app, a meeting Notetaker, and an MCP server). That link is the author's referral:
+signing up through it gives you a free month of Pro. Docs: [docs.wisprflow.ai](https://docs.wisprflow.ai).
+
 If the `wispr-flow` MCP server is connected (Wispr Flow on Mac: Settings, MCP, Connect
 for Claude, or the URL under "All other apps"), `post-call --from-wispr` searches your
 meetings, shows up to three candidates, and waits for your pick before reading the

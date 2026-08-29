@@ -4,6 +4,8 @@ All notable changes to rail-kit. Semver, one version for the whole kit.
 
 ## [Unreleased]
 
+- README: Wispr Flow referral link and docs link.
+
 ## [1.0.0] - 2026-08-30
 
 First public release. Four skills for voice-first client work, built for operators who
