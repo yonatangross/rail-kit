@@ -1,0 +1,23 @@
+{
+  "name": "rail-kit",
+  "version": "1.0.0",
+  "description": "Four agent Skills for voice-first client work: post-call recap and scope, pre-call cheatsheet, client context board, and a confirm-gated record sync. Built for operators who record calls with Wispr Flow (or any notetaker). Hebrew output by default, English on request. Drafts only, never sends.",
+  "author": {
+    "name": "Yonatan Gross",
+    "url": "https://yonyon.ai"
+  },
+  "repository": "https://github.com/yonatangross/rail-kit",
+  "homepage": "https://yonyon.ai/rail",
+  "license": "MIT",
+  "keywords": [
+    "skills",
+    "agent-skills",
+    "claude-code",
+    "wispr-flow",
+    "voice",
+    "post-call",
+    "sales",
+    "hebrew"
+  ],
+  "skills": "./skills/"
+}

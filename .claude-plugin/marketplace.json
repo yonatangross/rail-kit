@@ -1,0 +1,23 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "yonyon",
+  "owner": {
+    "name": "Yonatan Gross",
+    "url": "https://yonyon.ai"
+  },
+  "description": "Free kits from yonyon.ai. Marketplace co-located with the rail-kit plugin so the manifest, the skills and the release tag version together.",
+  "plugins": [
+    {
+      "name": "rail-kit",
+      "source": "./",
+      "version": "1.0.0",
+      "description": "Four agent Skills for voice-first client work: post-call, prep-call, client-context, sync-call-state. Drafts only, never sends.",
+      "category": "productivity",
+      "license": "MIT",
+      "author": {
+        "name": "Yonatan Gross",
+        "url": "https://yonyon.ai"
+      }
+    }
+  ]
+}

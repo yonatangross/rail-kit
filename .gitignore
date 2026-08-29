@@ -1,0 +1,6 @@
+dist/
+*.zip
+.DS_Store
+# A user cloning the repo can dogfood in place; real client data never lands here.
+clients/
+!fixtures/clients/
