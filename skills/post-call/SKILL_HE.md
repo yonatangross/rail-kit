@@ -1,9 +1,9 @@
 ---
 name: post-call
 description: תקציר למפעיל בעברית של post-call. המודל קורא רק את SKILL.md.
-version: 1.0.0
+version: 1.0.1
 ---
-<!-- mirrors SKILL.md v1.0.0 -->
+<!-- mirrors SKILL.md v1.0.1 -->
 
 # post-call (תקציר בעברית)
 

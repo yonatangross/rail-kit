@@ -4,9 +4,13 @@ All notable changes to rail-kit. Semver, one version for the whole kit.
 
 ## [Unreleased]
 
-- README: Wispr Flow referral link and docs link.
+## [1.0.1] - 2026-08-29
 
-## [1.0.0] - 2026-08-30
+- README and README_HE: Wispr Flow referral link and docs link (the 1.0.0 zip shipped without them).
+- clients-folder.md: state.md is read by client-context and prep-call only; post-call never reads it.
+- Workflows: third-party actions pinned by commit SHA.
+
+## [1.0.0] - 2026-08-29
 
 First public release. Four skills for voice-first client work, built for operators who
 record calls with Wispr Flow (or any notetaker) and keep one folder per client.

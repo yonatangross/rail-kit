@@ -1,9 +1,9 @@
 ---
 name: prep-call
 description: תקציר למפעיל בעברית של prep-call. המודל קורא רק את SKILL.md.
-version: 1.0.0
+version: 1.0.1
 ---
-<!-- mirrors SKILL.md v1.0.0 -->
+<!-- mirrors SKILL.md v1.0.1 -->
 
 # prep-call (תקציר בעברית)
 

@@ -2,12 +2,12 @@
 name: client-context
 description: Render a fixed status board for one client from the files in clients/<client-name>/ (profile, state log, post-call docs, cheatsheets, outreach, notes), the client's row in an optional CRM export, and Wispr Flow meeting titles when that MCP server is connected. The board shows stage, last contact with staleness, direction agreed, open threads, next steps and the sources consulted. Use as the opening read before touching a known client, or to answer where you stand with them. A disagreement between sources is flagged with both values, never resolved. NOT for a pre-call cheatsheet (prep-call), for drafting a recap and scope after a call (post-call), or for changing the stage or the state log (sync-call-state). Read-only, nothing is written. Model-invocable, so fire it yourself when the goal matches; do not fire it speculatively or as a checkpoint.
 tags: [client, context, status, read-only, wispr-flow]
-version: 1.0.0
+version: 1.0.1
 author: yonyon-ai
 user-invocable: true
 complexity: low
 argument-hint: "<client-name> [--since YYYY-MM-DD]"
-# model-invocable since 1.0.0 (2026-08-30): read-only, reads the client folder and optional exports, writes nothing, sends nothing.
+# model-invocable since 1.0.0 (2026-08-29): read-only, reads the client folder and optional exports, writes nothing, sends nothing.
 disable-model-invocation: false
 allowed-tools: Read, Glob, Grep
 ---

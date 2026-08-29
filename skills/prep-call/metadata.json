@@ -1,7 +1,7 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "organization": "yonyon-ai",
-  "date": "2026-08-30",
+  "date": "2026-08-29",
   "abstract": "Builds a one-page pre-call cheatsheet from the client folder (profile, state log, the last CallFacts block, the newest outreach, an optional CRM row and, when connected, Wispr Flow meeting titles): who, where we stand, open threads, goals, questions, pivots and one next step, in the client's language and register with Hebrew as the default. Writes only clients/<client-name>/cheatsheet-<date>-<HHMM>.md and never overwrites.",
   "ruleCount": 0,
   "categories": 0

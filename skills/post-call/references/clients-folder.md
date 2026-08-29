@@ -9,7 +9,7 @@ the folder name; there is no slug normalization and no mirror file elsewhere.
 | File | Written by | Read by |
 |---|---|---|
 | `profile.md` | you (copy `fixtures/clients/_template/`); `stage:` updated by sync-call-state after a yes | all four |
-| `state.md` | sync-call-state (append-only, newest at the bottom) | client-context, prep-call, post-call |
+| `state.md` | sync-call-state (append-only, newest at the bottom) | client-context, prep-call |
 | `call-<date>.txt` | you, or post-call when it caches a Wispr Flow meeting (it says so in the summary) | post-call |
 | `post-call-<date>.md` | post-call (deterministic path, guarded overwrite) | sync-call-state, client-context, prep-call |
 | `cheatsheet-<date>-<HHMM>.md` | prep-call (never overwrites; a same-minute rerun appends `-2`) | client-context |

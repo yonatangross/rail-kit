@@ -207,7 +207,7 @@ for skill_dir in "$SKILLS_DIR"/*/; do
   #
   #     `${CLAUDE_PLUGIN_ROOT:-.}` is the nastier variant and is caught too. It
   #     falls back to `.`, so it resolves ONLY when cwd happens to be the
-  #     hq-ext checkout, one of thirteen workspaces on this machine. It works
+  #     upstream checkout, one of thirteen workspaces on this machine. It works
   #     for the maintainer, in the maintainer's repo, and nowhere else.
   #
   #     Statically decidable, like the check-load-paths gate (#962). Prose may

@@ -1,9 +1,9 @@
 ---
 name: sync-call-state
 description: תקציר למפעיל בעברית של sync-call-state. המודל קורא רק את SKILL.md.
-version: 1.0.0
+version: 1.0.1
 ---
-<!-- mirrors SKILL.md v1.0.0 -->
+<!-- mirrors SKILL.md v1.0.1 -->
 
 # sync-call-state (תקציר בעברית)
 

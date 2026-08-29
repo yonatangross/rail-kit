@@ -6,7 +6,7 @@ diffs cleanly. The provenance line is the ownership signature the guard looks fo
 the words DRAFTS ONLY in it.
 
 ```markdown
-<!-- post-call v1.0.0 | client: <client-name> | call: <date> | source: <path or wispr:<id>> | language: <he|en> | DRAFTS ONLY, nothing sent -->
+<!-- post-call v<kit version> | client: <client-name> | call: <date> | source: <path or wispr:<id>> | language: <he|en> | DRAFTS ONLY, nothing sent -->
 
 # Post-call: <client-name>, <date>
 
