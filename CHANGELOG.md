@@ -4,6 +4,12 @@ All notable changes to rail-kit. Semver, one version for the whole kit.
 
 ## [Unreleased]
 
+## [1.1.2] - 2026-08-30
+
+- Release attestation now also covers `skills/*/scripts/**` (the files a user executes),
+  matching the Skills IL default subject set.
+- Hebrew and English tag lists have equal length on every skill.
+
 ## [1.1.1] - 2026-08-30
 
 - Workflow actions bumped by Dependabot (checkout 7, gitleaks-action 3, action-gh-release 3,

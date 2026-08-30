@@ -43,6 +43,7 @@ jobs:
             skills/*/SKILL.md
             skills/*/SKILL_HE.md
             skills/*/metadata.json
+            skills/*/scripts/**
 
       - name: GitHub Release with rail-kit.zip
         uses: softprops/action-gh-release@3d0d9888cb7fd7b750713d6e236d1fcb99157228 # v3.0.2

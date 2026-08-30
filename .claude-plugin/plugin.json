@@ -1,6 +1,6 @@
 {
   "name": "rail-kit",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Four agent Skills for voice-first client work: post-call recap and scope, pre-call cheatsheet, client context board, and a confirm-gated record sync. Built for operators who record calls with Wispr Flow (or any notetaker). Hebrew output by default, English on request. Drafts only, never sends.",
   "author": {
     "name": "Yonatan Gross",
