@@ -4,6 +4,11 @@ All notable changes to rail-kit. Semver, one version for the whole kit.
 
 ## [Unreleased]
 
+## [1.1.3] - 2026-08-30
+
+- Descriptions no longer contain angle brackets (`clients/NAME/` instead of a placeholder
+  in brackets); the Skills IL spec check rejects `<` and `>` in the description.
+
 ## [1.1.2] - 2026-08-30
 
 - Release attestation now also covers `skills/*/scripts/**` (the files a user executes),

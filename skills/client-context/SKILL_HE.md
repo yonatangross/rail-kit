@@ -1,9 +1,9 @@
 ---
 name: client-context
 description: תקציר למפעיל בעברית של client-context. המודל קורא רק את SKILL.md.
-version: 1.1.2
+version: 1.1.3
 ---
-<!-- mirrors SKILL.md v1.1.2 -->
+<!-- mirrors SKILL.md v1.1.3 -->
 
 # client-context (תקציר בעברית)
 

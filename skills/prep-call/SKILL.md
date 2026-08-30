@@ -1,8 +1,8 @@
 ---
 name: prep-call
-description: Build a one-page cheatsheet for the next call with a client from what the client folder already holds. Who they are, where things stand, the open threads, two to four goals for the call, the questions to ask, what to say when they push on price, timing or scope, and the one next step to propose, in the client's language and register (Hebrew by default). Use right before a scheduled call, once clients/<client-name>/ exists, whether it is the first call or the fifth. NOT for drafting the recap and scope after a call (post-call), for a status board when no call is ahead (client-context), or for writing an outcome into the state log (sync-call-state). Reads local files, an optional CRM export and Wispr Flow meeting titles; writes one new file and never overwrites. Model-invocable, so fire it yourself when the goal matches; do not fire it speculatively or as a checkpoint.
+description: Build a one-page cheatsheet for the next call with a client from what the client folder already holds. Who they are, where things stand, the open threads, two to four goals for the call, the questions to ask, what to say when they push on price, timing or scope, and the one next step to propose, in the client's language and register (Hebrew by default). Use right before a scheduled call, once clients/NAME/ exists, whether it is the first call or the fifth. NOT for drafting the recap and scope after a call (post-call), for a status board when no call is ahead (client-context), or for writing an outcome into the state log (sync-call-state). Reads local files, an optional CRM export and Wispr Flow meeting titles; writes one new file and never overwrites. Model-invocable, so fire it yourself when the goal matches; do not fire it speculatively or as a checkpoint.
 tags: [client, prep-call, cheatsheet, register, wispr-flow, hebrew]
-version: 1.1.2
+version: 1.1.3
 author: yonyon-ai
 user-invocable: true
 complexity: low
