@@ -2,7 +2,7 @@
 name: sync-call-state
 description: Record the outcome of a reviewed post-call document in the client's local state, from one confirmation and a visible diff. Computes one new entry for clients/<client-name>/state.md and, when the call carried a stage signal, a change to the single stage line in profile.md; shows both as a diff, asks Apply / Edit / Cancel, and writes only on Apply. Use after you reviewed the post-call doc and want the client's log and stage to say what was agreed. NOT for drafting the recap or the scope (post-call), for a status board (client-context), or for preparing the next call (prep-call). Model-invocable, so fire it yourself when the goal matches; state what you are about to do and get the operator's confirmation before the mutating step; never fire it as a background checkpoint.
 tags: [client, state, stage, post-call, confirm-gated]
-version: 1.0.1
+version: 1.1.0
 author: yonyon-ai
 user-invocable: true
 complexity: medium
@@ -10,6 +10,20 @@ argument-hint: "<client-name> [--doc <path>] [--date YYYY-MM-DD]"
 # model-invocable since 1.0.0 (2026-08-29): two local files, one visible diff, one confirmation; nothing leaves the client folder.
 disable-model-invocation: false
 allowed-tools: Read, Edit, Write, Glob, Grep, AskUserQuestion
+license: MIT
+compatibility: "Needs a host that can read and write files in the working directory (the clients/ folder). Verified on Claude Code; the other listed agents load the same SKILL.md from their skills folder (gh skill install / npx skills add). The Wispr Flow MCP server is optional; a transcript file works everywhere."
+supported_agents: [claude-code, cursor, github-copilot, windsurf, opencode, codex, gemini-cli, antigravity, openclaw]
+metadata:
+  display_name:
+    he: "עדכון מצב אחרי ביקורת"
+    en: "Confirm-gated state sync"
+  display_description:
+    he: "אחרי ביקורת של מסמך post-call: diff אחד ליומן המצב ולשורת השלב של הלקוח, נכתב רק אחרי אישור מפורש. שום מערכת חיצונית לא נוגעים בה."
+    en: "After you review a post-call doc: one diff for the client's state log and stage line, written only after an explicit yes. No external system is touched."
+  tags:
+    he: [לקוחות, יומן מצב, שלב לקוח, אישור, עברית]
+    en: [clients, state-sync, stage, confirm-gated, hebrew]
+  supported_agents: [claude-code, cursor, github-copilot, windsurf, opencode, codex, gemini-cli, antigravity, openclaw]
 ---
 
 # sync-call-state

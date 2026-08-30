@@ -9,6 +9,8 @@ on:
 
 permissions:
   contents: write
+  id-token: write
+  attestations: write
 
 jobs:
   release:
@@ -32,6 +34,15 @@ jobs:
 
       - name: build-zip
         run: bash scripts/build-zip.sh
+
+      - name: Sigstore provenance attestation (skills + zip)
+        uses: actions/attest-build-provenance@8beda2b7ed98355c0e97c0a63bec38ae472e66c4 # v4
+        with:
+          subject-path: |
+            dist/rail-kit.zip
+            skills/*/SKILL.md
+            skills/*/SKILL_HE.md
+            skills/*/metadata.json
 
       - name: GitHub Release with rail-kit.zip
         uses: softprops/action-gh-release@3bb12739c298aeb8a4eeaf626c5b8d85266b0e65 # v2

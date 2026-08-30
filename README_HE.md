@@ -20,9 +20,16 @@ sync-call-state: אחרי שעברתם על מסמך post-call. מציע diff א
 
 ## התקנה
 
-אחת משלוש הדרכים:
+אחת מארבע הדרכים:
 
-תוסף ל-Claude Code (מומלץ, מתעדכן עם הריפו):
+לכל סוכן, בפקודה אחת (Claude Code, Cursor, GitHub Copilot, Codex, Gemini CLI, Windsurf, OpenCode, Antigravity ועוד):
+
+```bash
+gh skill install yonatangross/rail-kit --agent claude-code
+npx skills add yonatangross/rail-kit
+```
+
+תוסף ל-Claude Code (מתעדכן עם הריפו):
 
 ```
 /plugin marketplace add yonatangross/rail-kit
@@ -36,9 +43,9 @@ git clone https://github.com/yonatangross/rail-kit.git
 cp -r rail-kit/skills/* ~/.claude/skills/
 ```
 
-קובץ zip בלי git: מורידים rail-kit.zip מה-release האחרון, פותחים, ומעתיקים את skills/* אל ~/.claude/skills/ (או אל .claude/skills/ בתוך פרויקט אחד).
+קובץ zip בלי git: מורידים rail-kit.zip מה-release האחרון, פותחים, ומעתיקים את skills/* אל תיקיית ה-Skills של הסוכן שלכם.
 
-אחרי זה /skills ב-Claude Code מציג את ארבעת ה-Skills.
+אחרי זה /skills ב-Claude Code מציג את ארבעת ה-Skills. נבדק מקצה לקצה ב-Claude Code; שאר הסוכנים קוראים את אותו SKILL.md (פורמט Agent Skills) מהתיקייה שלהם: .cursor/skills, .github/skills, .windsurf/skills, .opencode/skills, .codex/skills. הדרישה היחידה היא קריאה וכתיבה של קבצים בתיקיית העבודה. כל release חתום (Sigstore provenance).
 
 ## תיקייה אחת לכל לקוח
 

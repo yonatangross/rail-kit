@@ -4,6 +4,17 @@ All notable changes to rail-kit. Semver, one version for the whole kit.
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-08-30
+
+- SKILL.md frontmatter on all four skills: `license`, `compatibility`, `supported_agents`,
+  and `metadata` with Hebrew and English display name, display description and tags
+  (Skills IL catalog fields).
+- Release workflow signs every tag build with a Sigstore provenance attestation
+  (`actions/attest-build-provenance`) covering the zip and the skill files.
+- SECURITY.md, CODEOWNERS, Dependabot for GitHub Actions.
+- README and README_HE: one-command install for any agent (`gh skill install`,
+  `npx skills add`) and the per-agent skills folder table.
+
 ## [1.0.1] - 2026-08-29
 
 - README and README_HE: Wispr Flow referral link and docs link (the 1.0.0 zip shipped without them).

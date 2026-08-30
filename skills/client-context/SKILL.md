@@ -2,7 +2,7 @@
 name: client-context
 description: Render a fixed status board for one client from the files in clients/<client-name>/ (profile, state log, post-call docs, cheatsheets, outreach, notes), the client's row in an optional CRM export, and Wispr Flow meeting titles when that MCP server is connected. The board shows stage, last contact with staleness, direction agreed, open threads, next steps and the sources consulted. Use as the opening read before touching a known client, or to answer where you stand with them. A disagreement between sources is flagged with both values, never resolved. NOT for a pre-call cheatsheet (prep-call), for drafting a recap and scope after a call (post-call), or for changing the stage or the state log (sync-call-state). Read-only, nothing is written. Model-invocable, so fire it yourself when the goal matches; do not fire it speculatively or as a checkpoint.
 tags: [client, context, status, read-only, wispr-flow]
-version: 1.0.1
+version: 1.1.0
 author: yonyon-ai
 user-invocable: true
 complexity: low
@@ -10,6 +10,20 @@ argument-hint: "<client-name> [--since YYYY-MM-DD]"
 # model-invocable since 1.0.0 (2026-08-29): read-only, reads the client folder and optional exports, writes nothing, sends nothing.
 disable-model-invocation: false
 allowed-tools: Read, Glob, Grep
+license: MIT
+compatibility: "Needs a host that can read and write files in the working directory (the clients/ folder). Verified on Claude Code; the other listed agents load the same SKILL.md from their skills folder (gh skill install / npx skills add). The Wispr Flow MCP server is optional; a transcript file works everywhere."
+supported_agents: [claude-code, cursor, github-copilot, windsurf, opencode, codex, gemini-cli, antigravity, openclaw]
+metadata:
+  display_name:
+    he: "מצב לקוח"
+    en: "Client status board"
+  display_description:
+    he: "לוח מצב אחד ללקוח: שלב, קשר אחרון, מה סוכם, מה פתוח והצעד הבא. סתירות בין מקורות מסומנות ולא מוכרעות. קריאה בלבד."
+    en: "One status board per client: stage, last contact, what was agreed, what is open and the next step. Conflicts between sources are flagged, never resolved. Read-only."
+  tags:
+    he: [לקוחות, מצב לקוח, CRM, מעקב, עברית]
+    en: [clients, client-context, status-board, crm, follow-up, hebrew]
+  supported_agents: [claude-code, cursor, github-copilot, windsurf, opencode, codex, gemini-cli, antigravity, openclaw]
 ---
 
 # client-context

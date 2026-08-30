@@ -25,7 +25,16 @@ reads only `SKILL.md`.
 
 Pick one.
 
-**Claude Code plugin (recommended, updates with the repo):**
+**Any agent, one command** (Claude Code, Cursor, GitHub Copilot, Codex, Gemini CLI,
+Windsurf, OpenCode, Antigravity, and more; project scope by default, `--user` for
+everywhere):
+
+```bash
+gh skill install yonatangross/rail-kit --agent claude-code
+npx skills add yonatangross/rail-kit
+```
+
+**Claude Code plugin (updates with the repo):**
 
 ```
 /plugin marketplace add yonatangross/rail-kit
@@ -41,11 +50,27 @@ cp -r rail-kit/skills/* ~/.claude/skills/
 
 **Zip (no git):** download `rail-kit.zip` from the
 [latest release](https://github.com/yonatangross/rail-kit/releases/latest), unzip, and
-copy `skills/*` into `~/.claude/skills/` (or `.claude/skills/` inside one project).
+copy `skills/*` into your agent's skills folder.
 
 Then `/skills` in Claude Code lists `post-call`, `prep-call`, `client-context`,
-`sync-call-state`. Other agents that read the Agent Skills format can load the same
-`SKILL.md` files.
+`sync-call-state`.
+
+### Where each agent reads skills
+
+| Agent | Project folder | `gh skill install --agent` |
+|---|---|---|
+| Claude Code | `.claude/skills/` | `claude-code` |
+| Cursor | `.cursor/skills/` | `cursor` |
+| GitHub Copilot | `.github/skills/` | `github-copilot` |
+| Windsurf | `.windsurf/skills/` | `windsurf` |
+| OpenCode | `.opencode/skills/` | `opencode` |
+| Codex | `.codex/skills/` | `codex` |
+| Gemini CLI, Antigravity, OpenClaw and others | see `gh skill install --help` | their id |
+
+Verified end to end on Claude Code. The other agents load the same `SKILL.md`
+(Agent Skills format); the only hard requirement is file read/write in the working
+directory. Releases carry a Sigstore provenance attestation
+(`gh attestation verify rail-kit.zip --owner yonatangross`).
 
 ## One folder per client
 
