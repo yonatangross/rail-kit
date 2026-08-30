@@ -4,6 +4,10 @@ All notable changes to rail-kit. Semver, one version for the whole kit.
 
 ## [Unreleased]
 
+## [1.2.1] - 2026-08-30
+
+- `compatibility` frontmatter shortened under 500 characters (Skills IL spec limit).
+
 ## [1.2.0] - 2026-08-30
 
 - Chat mode (Step 0 in every skill) for hosts without file access: paste the inputs, get

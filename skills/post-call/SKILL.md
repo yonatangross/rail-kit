@@ -2,7 +2,7 @@
 name: post-call
 description: Turn one client call into a reviewed document with the call facts, a short recap message and a one-page scope, drafted in the client's language (Hebrew by default). Use right after a call when a text transcript exists (a file, or a Wispr Flow meeting through its MCP) and you want the follow-up written before you forget it. NOT for preparing a call (prep-call), for a status board (client-context), or for recording the outcome in the client's state log (sync-call-state). Model-invocable, so fire it yourself when the goal matches; drafts only, nothing is sent; state what you are about to do and get the operator's confirmation before the mutating step; never fire it as a background checkpoint.
 tags: [client, post-call, recap, scope, wispr-flow, hebrew]
-version: 1.2.0
+version: 1.2.1
 author: yonyon-ai
 user-invocable: true
 complexity: medium
@@ -11,7 +11,7 @@ argument-hint: "<client-name> [--transcript <path>] [--from-wispr [<meeting-id>]
 disable-model-invocation: false
 allowed-tools: Read, Write, Bash, Glob, Grep, AskUserQuestion
 license: MIT
-compatibility: "Coding agents with a working directory get the full file workflow: Claude Code (verified end to end), Cursor, GitHub Copilot, Windsurf, OpenCode, Codex, Gemini CLI, Antigravity, OpenClaw, Grok Build (they load the same SKILL.md via gh skill install / npx skills add). Chat hosts without file access (Claude.ai, Claude Desktop without a filesystem MCP, ChatGPT, Grok, Manus, Gemini Spark) get chat mode, Step 0: paste the inputs, read the outputs in chat, save them yourself; nothing is written. The Wispr Flow MCP server is optional everywhere."
+compatibility: "Full file workflow on coding agents with a working directory: Claude Code (verified), Cursor, GitHub Copilot, Windsurf, OpenCode, Codex, Gemini CLI, Antigravity, OpenClaw, Grok Build. Chat mode (Step 0) on hosts without file access: Claude.ai, Claude Desktop, ChatGPT, Grok, Manus, Gemini Spark; paste the inputs, read the outputs, save them yourself, nothing is written. Wispr Flow MCP optional."
 supported_agents: [claude-code, cursor, github-copilot, windsurf, opencode, codex, gemini-cli, antigravity, openclaw, grok-build, claude-desktop, claude-ai, chatgpt, manus, gemini-spark, grok]
 metadata:
   display_name:

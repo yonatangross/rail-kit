@@ -2,7 +2,7 @@
 name: prep-call
 description: Build a one-page cheatsheet for the next call with a client from what the client folder already holds. Who they are, where things stand, the open threads, two to four goals for the call, the questions to ask, what to say when they push on price, timing or scope, and the one next step to propose, in the client's language and register (Hebrew by default). Use right before a scheduled call, once clients/NAME/ exists, whether it is the first call or the fifth. NOT for drafting the recap and scope after a call (post-call), for a status board when no call is ahead (client-context), or for writing an outcome into the state log (sync-call-state). Reads local files, an optional CRM export and Wispr Flow meeting titles; writes one new file and never overwrites. Model-invocable, so fire it yourself when the goal matches; do not fire it speculatively or as a checkpoint.
 tags: [client, prep-call, cheatsheet, register, wispr-flow, hebrew]
-version: 1.2.0
+version: 1.2.1
 author: yonyon-ai
 user-invocable: true
 complexity: low
@@ -11,7 +11,7 @@ argument-hint: "<client-name> [--for YYYY-MM-DD] [--lang he|en]"
 disable-model-invocation: false
 allowed-tools: Read, Write, Glob, Grep, AskUserQuestion
 license: MIT
-compatibility: "Coding agents with a working directory get the full file workflow: Claude Code (verified end to end), Cursor, GitHub Copilot, Windsurf, OpenCode, Codex, Gemini CLI, Antigravity, OpenClaw, Grok Build (they load the same SKILL.md via gh skill install / npx skills add). Chat hosts without file access (Claude.ai, Claude Desktop without a filesystem MCP, ChatGPT, Grok, Manus, Gemini Spark) get chat mode, Step 0: paste the inputs, read the outputs in chat, save them yourself; nothing is written. The Wispr Flow MCP server is optional everywhere."
+compatibility: "Full file workflow on coding agents with a working directory: Claude Code (verified), Cursor, GitHub Copilot, Windsurf, OpenCode, Codex, Gemini CLI, Antigravity, OpenClaw, Grok Build. Chat mode (Step 0) on hosts without file access: Claude.ai, Claude Desktop, ChatGPT, Grok, Manus, Gemini Spark; paste the inputs, read the outputs, save them yourself, nothing is written. Wispr Flow MCP optional."
 supported_agents: [claude-code, cursor, github-copilot, windsurf, opencode, codex, gemini-cli, antigravity, openclaw, grok-build, claude-desktop, claude-ai, chatgpt, manus, gemini-spark, grok]
 metadata:
   display_name:
