@@ -4,6 +4,11 @@ All notable changes to rail-kit. Semver, one version for the whole kit.
 
 ## [Unreleased]
 
+## [1.1.1] - 2026-08-30
+
+- Workflow actions bumped by Dependabot (checkout 7, gitleaks-action 3, action-gh-release 3,
+  attest-build-provenance 4.2.2). No skill changes.
+
 ## [1.1.0] - 2026-08-30
 
 - SKILL.md frontmatter on all four skills: `license`, `compatibility`, `supported_agents`,

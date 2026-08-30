@@ -2,7 +2,7 @@
 name: sync-call-state
 description: Record the outcome of a reviewed post-call document in the client's local state, from one confirmation and a visible diff. Computes one new entry for clients/<client-name>/state.md and, when the call carried a stage signal, a change to the single stage line in profile.md; shows both as a diff, asks Apply / Edit / Cancel, and writes only on Apply. Use after you reviewed the post-call doc and want the client's log and stage to say what was agreed. NOT for drafting the recap or the scope (post-call), for a status board (client-context), or for preparing the next call (prep-call). Model-invocable, so fire it yourself when the goal matches; state what you are about to do and get the operator's confirmation before the mutating step; never fire it as a background checkpoint.
 tags: [client, state, stage, post-call, confirm-gated]
-version: 1.1.0
+version: 1.1.1
 author: yonyon-ai
 user-invocable: true
 complexity: medium

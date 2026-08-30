@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.1.1",
   "organization": "yonyon-ai",
   "date": "2026-08-29",
   "abstract": "Turns one client call transcript (file or Wispr Flow meeting) into a reviewed document: a CallFacts block, a short recap and a one-page scope with a deferred price. Writes only clients/<client-name>/post-call-<date>.md behind an ownership guard. Drafts only, never sends.",

@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.1.1",
   "organization": "yonyon-ai",
   "date": "2026-08-29",
   "abstract": "Renders a fixed read-only status board for one client from clients/<client-name>/ (profile, state log, post-call call facts and recaps, cheatsheets, outreach, notes), an optional CRM export row, and Wispr Flow meeting titles when connected: stage, last contact with 30-day staleness, direction agreed, open threads, next steps, sources consulted. Disagreements between sources are flagged with every value and source, never resolved. Writes nothing, sends nothing.",

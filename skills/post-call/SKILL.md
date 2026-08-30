@@ -2,7 +2,7 @@
 name: post-call
 description: Turn one client call into a reviewed document with the call facts, a short recap message and a one-page scope, drafted in the client's language (Hebrew by default). Use right after a call when a text transcript exists (a file, or a Wispr Flow meeting through its MCP) and you want the follow-up written before you forget it. NOT for preparing a call (prep-call), for a status board (client-context), or for recording the outcome in the client's state log (sync-call-state). Model-invocable, so fire it yourself when the goal matches; drafts only, nothing is sent; state what you are about to do and get the operator's confirmation before the mutating step; never fire it as a background checkpoint.
 tags: [client, post-call, recap, scope, wispr-flow, hebrew]
-version: 1.1.0
+version: 1.1.1
 author: yonyon-ai
 user-invocable: true
 complexity: medium
