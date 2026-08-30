@@ -45,7 +45,7 @@ cp -r rail-kit/skills/* ~/.claude/skills/
 
 קובץ zip בלי git: מורידים rail-kit.zip מה-release האחרון, פותחים, ומעתיקים את skills/* אל תיקיית ה-Skills של הסוכן שלכם.
 
-אחרי זה /skills ב-Claude Code מציג את ארבעת ה-Skills. נבדק מקצה לקצה ב-Claude Code; שאר הסוכנים קוראים את אותו SKILL.md (פורמט Agent Skills) מהתיקייה שלהם: .cursor/skills, .github/skills, .windsurf/skills, .opencode/skills, .codex/skills. הדרישה היחידה היא קריאה וכתיבה של קבצים בתיקיית העבודה. כל release חתום (Sigstore provenance).
+אחרי זה /skills ב-Claude Code מציג את ארבעת ה-Skills. נבדק מקצה לקצה ב-Claude Code; שאר הסוכנים קוראים את אותו SKILL.md (פורמט Agent Skills) מהתיקייה שלהם: .cursor/skills, .github/skills, .windsurf/skills, .opencode/skills, .codex/skills. סוכני קוד עם תיקיית עבודה מקבלים את כל זרימת הקבצים. מארחי צ'אט בלי גישה לקבצים (Claude.ai, Claude Desktop, ChatGPT, Grok, Manus, Gemini Spark) מקבלים מצב צ'אט: מדביקים את התמליל או את קבצי הלקוח, מקבלים את הסיכום, ההיקף, דף ההכנה או הלוח בצ'אט, ושומרים בעצמכם. שום דבר לא נכתב ולא נשלח. כל release חתום (Sigstore provenance).
 
 ## תיקייה אחת לכל לקוח
 

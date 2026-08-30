@@ -1,9 +1,9 @@
 ---
 name: client-context
 description: תקציר למפעיל בעברית של client-context. המודל קורא רק את SKILL.md.
-version: 1.1.3
+version: 1.2.0
 ---
-<!-- mirrors SKILL.md v1.1.3 -->
+<!-- mirrors SKILL.md v1.2.0 -->
 
 # client-context (תקציר בעברית)
 
@@ -23,6 +23,10 @@ version: 1.1.3
 - לנסח סיכום והיקף אחרי שיחה: post-call.
 - לשנות את שורת השלב או להוסיף רשומה ליומן: sync-call-state.
 - לקוח בלי תיקייה: קודם יוצרים אותה (שלב 1 מדפיס את הפקודה).
+
+## מצב צ'אט
+
+במארחים בלי גישה לקבצים (Claude.ai, ChatGPT, Grok, Manus, Gemini Spark, Claude Desktop בלי MCP לקבצים): מדביקים את הקלט בצ'אט, הפלט מודפס בצ'אט, שום דבר לא נכתב. שומרים את התוצאה בעצמכם.
 
 ## השלבים
 

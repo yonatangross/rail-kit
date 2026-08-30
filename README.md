@@ -65,11 +65,14 @@ Then `/skills` in Claude Code lists `post-call`, `prep-call`, `client-context`,
 | Windsurf | `.windsurf/skills/` | `windsurf` |
 | OpenCode | `.opencode/skills/` | `opencode` |
 | Codex | `.codex/skills/` | `codex` |
-| Gemini CLI, Antigravity, OpenClaw and others | see `gh skill install --help` | their id |
+| Gemini CLI, Antigravity, OpenClaw, Grok Build | see `gh skill install --help` | their id |
+| Claude.ai, Claude Desktop, ChatGPT, Grok, Manus, Gemini Spark | chat mode: paste `SKILL.md` as instructions (or a project / custom-GPT file), then paste your inputs | n/a |
 
-Verified end to end on Claude Code. The other agents load the same `SKILL.md`
-(Agent Skills format); the only hard requirement is file read/write in the working
-directory. Releases carry a Sigstore provenance attestation
+Verified end to end on Claude Code. The other coding agents load the same `SKILL.md`
+(Agent Skills format) and get the full file workflow. Chat hosts without file access get
+**chat mode** (Step 0 of every skill): paste the transcript or client notes, read the
+recap, scope, cheatsheet or board in chat, save it yourself; nothing is written and
+nothing is sent. Releases carry a Sigstore provenance attestation
 (`gh attestation verify rail-kit.zip --owner yonatangross`).
 
 ## One folder per client

@@ -2,7 +2,7 @@
 name: sync-call-state
 description: Record the outcome of a reviewed post-call document in the client's local state, from one confirmation and a visible diff. Computes one new entry for clients/NAME/state.md and, when the call carried a stage signal, a change to the single stage line in profile.md; shows both as a diff, asks Apply / Edit / Cancel, and writes only on Apply. Use after you reviewed the post-call doc and want the client's log and stage to say what was agreed. NOT for drafting the recap or the scope (post-call), for a status board (client-context), or for preparing the next call (prep-call). Model-invocable, so fire it yourself when the goal matches; state what you are about to do and get the operator's confirmation before the mutating step; never fire it as a background checkpoint.
 tags: [client, state, stage, post-call, confirm-gated]
-version: 1.1.3
+version: 1.2.0
 author: yonyon-ai
 user-invocable: true
 complexity: medium
@@ -11,8 +11,8 @@ argument-hint: "<client-name> [--doc <path>] [--date YYYY-MM-DD]"
 disable-model-invocation: false
 allowed-tools: Read, Edit, Write, Glob, Grep, AskUserQuestion
 license: MIT
-compatibility: "Needs a host that can read and write files in the working directory (the clients/ folder). Verified on Claude Code; the other listed agents load the same SKILL.md from their skills folder (gh skill install / npx skills add). The Wispr Flow MCP server is optional; a transcript file works everywhere."
-supported_agents: [claude-code, cursor, github-copilot, windsurf, opencode, codex, gemini-cli, antigravity, openclaw]
+compatibility: "Coding agents with a working directory get the full file workflow: Claude Code (verified end to end), Cursor, GitHub Copilot, Windsurf, OpenCode, Codex, Gemini CLI, Antigravity, OpenClaw, Grok Build (they load the same SKILL.md via gh skill install / npx skills add). Chat hosts without file access (Claude.ai, Claude Desktop without a filesystem MCP, ChatGPT, Grok, Manus, Gemini Spark) get chat mode, Step 0: paste the inputs, read the outputs in chat, save them yourself; nothing is written. The Wispr Flow MCP server is optional everywhere."
+supported_agents: [claude-code, cursor, github-copilot, windsurf, opencode, codex, gemini-cli, antigravity, openclaw, grok-build, claude-desktop, claude-ai, chatgpt, manus, gemini-spark, grok]
 metadata:
   display_name:
     he: "עדכון מצב אחרי ביקורת"
@@ -23,7 +23,7 @@ metadata:
   tags:
     he: [לקוחות, יומן מצב, שלב לקוח, אישור, עברית]
     en: [clients, state-sync, stage, confirm-gated, hebrew]
-  supported_agents: [claude-code, cursor, github-copilot, windsurf, opencode, codex, gemini-cli, antigravity, openclaw]
+  supported_agents: [claude-code, cursor, github-copilot, windsurf, opencode, codex, gemini-cli, antigravity, openclaw, grok-build, claude-desktop, claude-ai, chatgpt, manus, gemini-spark, grok]
 ---
 
 # sync-call-state
@@ -56,6 +56,15 @@ never reads a transcript and writes nothing but the two files above.
 - On a transcript, a chat export or your own notes. Only a post-call doc is accepted.
 
 ## Workflow
+
+### Step 0: chat mode (hosts without file access)
+
+On a host that cannot read or write files (Claude.ai, ChatGPT, Grok, Manus, Gemini Spark, or Claude Desktop without a filesystem MCP), run in chat mode: ask the user
+to paste the reviewed post-call doc (it must carry `DRAFTS ONLY` and the `CallFacts`
+block), the current `stage:` line and the last `state.md` entry. Run Step 2, then print
+the proposal as two paste-ready blocks (the new `state.md` entry and the new `stage:`
+line). Steps 3 and 4 do not run: the user applies the change by hand. No external
+system is touched in either mode.
 
 ### Step 1: load the reviewed doc and the client files
 

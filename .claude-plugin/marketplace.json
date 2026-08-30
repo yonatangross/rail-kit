@@ -10,7 +10,7 @@
     {
       "name": "rail-kit",
       "source": "./",
-      "version": "1.1.3",
+      "version": "1.2.0",
       "description": "Four agent Skills for voice-first client work: post-call, prep-call, client-context, sync-call-state. Drafts only, never sends.",
       "category": "productivity",
       "license": "MIT",

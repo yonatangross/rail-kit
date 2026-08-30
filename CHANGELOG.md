@@ -4,6 +4,15 @@ All notable changes to rail-kit. Semver, one version for the whole kit.
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-08-30
+
+- Chat mode (Step 0 in every skill) for hosts without file access: paste the inputs, get
+  the outputs in chat, save them yourself. `sync-call-state` prints paste-ready blocks
+  instead of applying. Nothing is written or sent in chat mode.
+- `supported_agents` now lists all 16 agents Skills IL knows; `compatibility` says which
+  mode each family gets. One chat-mode case added to every behavioral spec.
+- SKILL_HE.md twins and both READMEs describe chat mode.
+
 ## [1.1.3] - 2026-08-30
 
 - Descriptions no longer contain angle brackets (`clients/NAME/` instead of a placeholder

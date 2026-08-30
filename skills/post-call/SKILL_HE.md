@@ -1,9 +1,9 @@
 ---
 name: post-call
 description: תקציר למפעיל בעברית של post-call. המודל קורא רק את SKILL.md.
-version: 1.1.3
+version: 1.2.0
 ---
-<!-- mirrors SKILL.md v1.1.3 -->
+<!-- mirrors SKILL.md v1.2.0 -->
 
 # post-call (תקציר בעברית)
 
@@ -22,6 +22,10 @@ version: 1.1.3
 - לראות איפה הלקוח עומד: client-context.
 - לעדכן את יומן המצב והשלב אחרי ביקורת: sync-call-state.
 - קובץ אודיו: הסקיל קורא טקסט בלבד ועוצר.
+
+## מצב צ'אט
+
+במארחים בלי גישה לקבצים (Claude.ai, ChatGPT, Grok, Manus, Gemini Spark, Claude Desktop בלי MCP לקבצים): מדביקים את הקלט בצ'אט, הפלט מודפס בצ'אט, שום דבר לא נכתב. שומרים את התוצאה בעצמכם.
 
 ## השלבים
 

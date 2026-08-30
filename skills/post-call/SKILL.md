@@ -2,7 +2,7 @@
 name: post-call
 description: Turn one client call into a reviewed document with the call facts, a short recap message and a one-page scope, drafted in the client's language (Hebrew by default). Use right after a call when a text transcript exists (a file, or a Wispr Flow meeting through its MCP) and you want the follow-up written before you forget it. NOT for preparing a call (prep-call), for a status board (client-context), or for recording the outcome in the client's state log (sync-call-state). Model-invocable, so fire it yourself when the goal matches; drafts only, nothing is sent; state what you are about to do and get the operator's confirmation before the mutating step; never fire it as a background checkpoint.
 tags: [client, post-call, recap, scope, wispr-flow, hebrew]
-version: 1.1.3
+version: 1.2.0
 author: yonyon-ai
 user-invocable: true
 complexity: medium
@@ -11,8 +11,8 @@ argument-hint: "<client-name> [--transcript <path>] [--from-wispr [<meeting-id>]
 disable-model-invocation: false
 allowed-tools: Read, Write, Bash, Glob, Grep, AskUserQuestion
 license: MIT
-compatibility: "Needs a host that can read and write files in the working directory (the clients/ folder). Verified on Claude Code; the other listed agents load the same SKILL.md from their skills folder (gh skill install / npx skills add). The Wispr Flow MCP server is optional; a transcript file works everywhere."
-supported_agents: [claude-code, cursor, github-copilot, windsurf, opencode, codex, gemini-cli, antigravity, openclaw]
+compatibility: "Coding agents with a working directory get the full file workflow: Claude Code (verified end to end), Cursor, GitHub Copilot, Windsurf, OpenCode, Codex, Gemini CLI, Antigravity, OpenClaw, Grok Build (they load the same SKILL.md via gh skill install / npx skills add). Chat hosts without file access (Claude.ai, Claude Desktop without a filesystem MCP, ChatGPT, Grok, Manus, Gemini Spark) get chat mode, Step 0: paste the inputs, read the outputs in chat, save them yourself; nothing is written. The Wispr Flow MCP server is optional everywhere."
+supported_agents: [claude-code, cursor, github-copilot, windsurf, opencode, codex, gemini-cli, antigravity, openclaw, grok-build, claude-desktop, claude-ai, chatgpt, manus, gemini-spark, grok]
 metadata:
   display_name:
     he: "סיכום אחרי שיחה"
@@ -23,7 +23,7 @@ metadata:
   tags:
     he: [לקוחות, שיחת מכירה, סיכום שיחה, היקף עבודה, תמלול, Wispr Flow, מכירות, עברית]
     en: [clients, sales-call, post-call, recap, scope, transcript, wispr-flow, hebrew]
-  supported_agents: [claude-code, cursor, github-copilot, windsurf, opencode, codex, gemini-cli, antigravity, openclaw]
+  supported_agents: [claude-code, cursor, github-copilot, windsurf, opencode, codex, gemini-cli, antigravity, openclaw, grok-build, claude-desktop, claude-ai, chatgpt, manus, gemini-spark, grok]
 ---
 
 # post-call
@@ -54,6 +54,14 @@ This skill only reads a transcript and writes `clients/<client-name>/post-call-<
   and similar. Transcribe first (Wispr Flow does this for its own meetings).
 
 ## Workflow
+
+### Step 0: chat mode (hosts without file access)
+
+On a host that cannot read or write files (Claude.ai, ChatGPT, Grok, Manus, Gemini Spark, or Claude Desktop without a filesystem MCP), run in chat mode: ask for the
+transcript pasted in chat plus the client's name and language (Hebrew by default). Skip
+Steps 1, 2 and 5. Run Steps 3, 4 and 6 on the pasted text and print the complete review
+doc in chat, headed `DRAFTS ONLY` and `chat mode: nothing was written`, for the user to
+save as `clients/NAME/post-call-DATE.md`. Nothing is sent in either mode.
 
 ### Step 1: resolve the client and the language
 

@@ -1,9 +1,9 @@
 ---
 name: prep-call
 description: תקציר למפעיל בעברית של prep-call. המודל קורא רק את SKILL.md.
-version: 1.1.3
+version: 1.2.0
 ---
-<!-- mirrors SKILL.md v1.1.3 -->
+<!-- mirrors SKILL.md v1.2.0 -->
 
 # prep-call (תקציר בעברית)
 
@@ -22,6 +22,10 @@ version: 1.1.3
 - אחרי השיחה, לניסוח סיכום והיקף: post-call.
 - לראות שלב, נושאים פתוחים וקשר אחרון בלי שיחה קרובה: client-context.
 - לשנות את שורת השלב או להוסיף ליומן המצב: sync-call-state.
+
+## מצב צ'אט
+
+במארחים בלי גישה לקבצים (Claude.ai, ChatGPT, Grok, Manus, Gemini Spark, Claude Desktop בלי MCP לקבצים): מדביקים את הקלט בצ'אט, הפלט מודפס בצ'אט, שום דבר לא נכתב. שומרים את התוצאה בעצמכם.
 
 ## השלבים
 

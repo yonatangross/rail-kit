@@ -1,9 +1,9 @@
 ---
 name: sync-call-state
 description: תקציר למפעיל בעברית של sync-call-state. המודל קורא רק את SKILL.md.
-version: 1.1.3
+version: 1.2.0
 ---
-<!-- mirrors SKILL.md v1.1.3 -->
+<!-- mirrors SKILL.md v1.2.0 -->
 
 # sync-call-state (תקציר בעברית)
 
@@ -24,6 +24,10 @@ version: 1.1.3
 - להתכונן לשיחה הבאה: prep-call.
 - לפני שעברתם על המסמך. מסמך שלא נבדק מייצר מצב שלא נבדק.
 - על תמליל, ייצוא צ'אט או הערות אישיות. רק מסמך post-call מתקבל.
+
+## מצב צ'אט
+
+במארחים בלי גישה לקבצים (Claude.ai, ChatGPT, Grok, Manus, Gemini Spark, Claude Desktop בלי MCP לקבצים): מדביקים את הקלט בצ'אט, הפלט מודפס בצ'אט, שום דבר לא נכתב. שומרים את התוצאה בעצמכם.
 
 ## השלבים
 

@@ -2,7 +2,7 @@
 name: client-context
 description: Render a fixed status board for one client from the files in clients/NAME/ (profile, state log, post-call docs, cheatsheets, outreach, notes), the client's row in an optional CRM export, and Wispr Flow meeting titles when that MCP server is connected. The board shows stage, last contact with staleness, direction agreed, open threads, next steps and the sources consulted. Use as the opening read before touching a known client, or to answer where you stand with them. A disagreement between sources is flagged with both values, never resolved. NOT for a pre-call cheatsheet (prep-call), for drafting a recap and scope after a call (post-call), or for changing the stage or the state log (sync-call-state). Read-only, nothing is written. Model-invocable, so fire it yourself when the goal matches; do not fire it speculatively or as a checkpoint.
 tags: [client, context, status, read-only, wispr-flow]
-version: 1.1.3
+version: 1.2.0
 author: yonyon-ai
 user-invocable: true
 complexity: low
@@ -11,8 +11,8 @@ argument-hint: "<client-name> [--since YYYY-MM-DD]"
 disable-model-invocation: false
 allowed-tools: Read, Glob, Grep
 license: MIT
-compatibility: "Needs a host that can read and write files in the working directory (the clients/ folder). Verified on Claude Code; the other listed agents load the same SKILL.md from their skills folder (gh skill install / npx skills add). The Wispr Flow MCP server is optional; a transcript file works everywhere."
-supported_agents: [claude-code, cursor, github-copilot, windsurf, opencode, codex, gemini-cli, antigravity, openclaw]
+compatibility: "Coding agents with a working directory get the full file workflow: Claude Code (verified end to end), Cursor, GitHub Copilot, Windsurf, OpenCode, Codex, Gemini CLI, Antigravity, OpenClaw, Grok Build (they load the same SKILL.md via gh skill install / npx skills add). Chat hosts without file access (Claude.ai, Claude Desktop without a filesystem MCP, ChatGPT, Grok, Manus, Gemini Spark) get chat mode, Step 0: paste the inputs, read the outputs in chat, save them yourself; nothing is written. The Wispr Flow MCP server is optional everywhere."
+supported_agents: [claude-code, cursor, github-copilot, windsurf, opencode, codex, gemini-cli, antigravity, openclaw, grok-build, claude-desktop, claude-ai, chatgpt, manus, gemini-spark, grok]
 metadata:
   display_name:
     he: "מצב לקוח"
@@ -23,7 +23,7 @@ metadata:
   tags:
     he: [לקוחות, מצב לקוח, לוח מצב, CRM, מעקב, עברית]
     en: [clients, client-context, status-board, crm, follow-up, hebrew]
-  supported_agents: [claude-code, cursor, github-copilot, windsurf, opencode, codex, gemini-cli, antigravity, openclaw]
+  supported_agents: [claude-code, cursor, github-copilot, windsurf, opencode, codex, gemini-cli, antigravity, openclaw, grok-build, claude-desktop, claude-ai, chatgpt, manus, gemini-spark, grok]
 ---
 
 # client-context
@@ -51,6 +51,13 @@ approve it. This skill only reads and renders.
 - For a client with no folder yet: create it first (Step 1 prints the command).
 
 ## Workflow
+
+### Step 0: chat mode (hosts without file access)
+
+On a host that cannot read files (Claude.ai, ChatGPT, Grok, Manus, Gemini Spark, or Claude Desktop without a filesystem MCP), run in chat mode: ask the user to paste
+the client files they have (profile, state log, post-call `CallFacts`, notes) and run
+Steps 4 and 5 on that material. The board says which sources were absent. This skill
+writes nothing in either mode.
 
 ### Step 1: resolve the client folder
 
